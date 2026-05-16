@@ -4,30 +4,25 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
 
 jobs:
   build_e_testes:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Baixar o código fonte
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configurar Java 21
+      - name: Setup Java
         uses: actions/setup-java@v4
         with:
           java-version: '21'
           distribution: 'temurin'
-          cache: maven
 
-      - name: Verificar estrutura
+      - name: Mostrar estrutura
         run: |
           pwd
-          ls -la
-          find . -name pom.xml
+          ls -R
 
-      - name: Compilar e testar com Maven
-        run: mvn clean package -f ./lab/pom.xml
+      - name: Build Maven
+        run: mvn clean package -f pom.xml

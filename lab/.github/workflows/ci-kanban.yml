@@ -24,5 +24,4 @@ jobs:
           cache: maven
 
       - name: Compilar e testar com Maven
-        run: cd lab && mvn clean package
-        working-directory: ./lab
+        run: mvn clean package

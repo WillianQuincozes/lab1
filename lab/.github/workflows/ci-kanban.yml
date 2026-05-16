@@ -25,3 +25,4 @@ jobs:
 
       - name: Compilar e testar com Maven
         run: mvn clean package
+        working-directory: ./lab

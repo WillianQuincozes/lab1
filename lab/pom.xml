@@ -11,7 +11,8 @@
 	<groupId>br.com.faculdadedonaduzzi</groupId>
 	<artifactId>lab</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>lab</name>
+    <packaging>pom</packaging>
+    <name>lab</name>
 	<description>Demo Project to be used in Virtualisation and Version Control</description>
 	<url/>
 	<licenses>
@@ -20,7 +21,10 @@
 	<developers>
 		<developer/>
 	</developers>
-	<scm>
+    <modules>
+        <module>github</module>
+    </modules>
+    <scm>
 		<connection/>
 		<developerConnection/>
 		<tag/>

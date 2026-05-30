@@ -1,4 +1,4 @@
-name: CD - Entrega Contínua Docker
+name: CD - Entrega Cont�nua Docker
 
 on:
   push:
@@ -9,7 +9,7 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
     steps:
-      - name: Baixar o código fonte
+      - name: Baixar o codigo fonte
         uses: actions/checkout@v4
 
       - name: Login no Docker Hub
